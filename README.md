@@ -1,21 +1,19 @@
 # Analyzing Stock Prices
 
 ## Overview of Project
+Our client asked us to provide an automated way to analyze and provide summary statistics for stock prices in 2018.  I created a macro that provided a summary table of the handful of stocks; however, the client's concern is that the created macro will not perform well when applied to a very large data set.
 
-
-### Purpose:
-
-## Analysis and Challenges
-
-### Analysis of Outcomes Based on Launch Date
-
-### Analysis of Outcomes Based on Goals
-![Image 2: Outcomes vs. Goals](/resources/Outcomes_vs_Goals.png)
-
-
-### Challenges and Difficulties Encountered
+**The goal of this project is to refactor the existing VBA code to determine if it will improve performance, and to then explain why.**
 
 ## Results
+By refactoring the code, I was able to improve the total processing time by 50%.
+
+**Original 2018 Processing Time**
+![Image 1: Original Processing Time](/resources/VBA_Challenge_2018_Original.PNG)
+
+**Refactored 2018 Processing Time**
+![Image 2: Refactored Processing Time](/resources/VBA_Challenge_2018_Redone.PNG)
+
 
 ### - What are two conclusions you can draw about the Outcomes based on Launch Date?
 
