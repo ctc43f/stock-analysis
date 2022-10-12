@@ -39,6 +39,7 @@ Effectively we removed the portion of the original code regarding j = 2 to RowCo
 Advantages of refactoring code include:
 - Reductions in processing time and memory usage; the latter is important because the processing happens on a local machine and poorly written code can fill RAM and cause the program to crash.  An example would be attempting to make multiple copies of a data-heavy tab as a processing step or attempting to create a complex array function in Excel that prevents the macro from completing.
 - Ability to separate and distribute the work across multiple individuals.  If the code is highly compartmentalized and modular, you could assign individuals to each refactor a portion and then run tests on the entire macro as portions are complete.  This is much easier when subroutines are contained in their own macros and then the high-level macro calls those subroutine macros; you can refactor and just ensure the outputs are the same while not breaking other portions of the main macro.
+- Increase readability.  If the original code is quite complex and total code volume can be reduced through refactoring, it might make it easier for future users to follow the logic.
 
 Disadvantages of refactoring code include:
 - Value of refactored code vs. benefit of time spent: if the macro will be used sparingly or process time and memory are not factors, the time spent to refactor may not yield the same value.  If you pay ten high-cost resources for six months to refactor and you save 1 second of processing time, it likely wasn't worth the effort.
@@ -46,3 +47,8 @@ Disadvantages of refactoring code include:
 - Refactoring areas that don't generate efficiencies.  If the code is complex and you are having issues with memory or processing time, it might not be clear at first glance understanding what portion of the process is the root cause of the issues.  Refactoring portions of code that don't generate benefit is wasted time.
 
 ### - How do these pros and cons apply to refactoring the original VBA script?
+
+- Reductions in processing time and memory usage: I saw a significant reduction in processing time by eliminating the multiple iterations of the entirety of the data.
+- Increase readability.  In this case, and in my opinion, the code actually got more complex to follow.  It was easier to read the original code's two loops and understand what it was looking for, versus trying to handle all comparison steps during the refactored code's single iteration.
+- Ability to separate work.  This code would have actually been one that could have been compartmentalized in order to break up the refactoring work across individuals.  The formatting potion and the summary statistics portions could have been given to two individuals to refactor as sub-macros and then combined into one macro.
+- Value of the refactored code.  For this code and on this relatively small data set, it saved very little in the way of processing time but I can see that for big data projects, the time saved could be quite significant.
